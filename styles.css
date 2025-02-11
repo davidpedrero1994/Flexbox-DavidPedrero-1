@@ -1,0 +1,160 @@
+:root {
+  --rtc-primary-color: #13845380;
+  --rtc-secondary-color: #138453;
+  --rtc-teritiary-color: #f0edb5fe;
+  --rtc-background-color: #ffffff;
+}
+body {
+  margin: 0; /* Sin márgenes */
+  padding: 0; /* Sin relleno */
+  font-family: Arial, sans-serif; /* Fuente Arial */
+  min-height: 100vh; /* Altura mínima de la vista */
+  background-color: var(--rtc-background-color);
+}
+header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+header > img {
+  width: 15vh; /* Aumentar el tamaño a 15vh */
+  height: 15vh; /* Aumentar el tamaño a 15vh */
+}
+header > nav {
+  flex-grow: 1;
+  background-color: var(--rtc-teritiary-color);
+  display: flex;
+  justify-content: center;
+}
+.nav-list {
+  display: flex;
+  justify-content: end;
+  background-color: var(--rtc-teritiary-color);
+  width: 100%;
+  list-style: none;
+  gap: 50px;
+}
+a {
+  color: var(--rtc-secondary-color);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 20px;
+}
+.container {
+  min-height: 80vh; /* Altura mínima de 80% de la vista */
+  display: flex; /* Usar Flexbox */
+}
+header,
+footer {
+  height: 15vh; /* Altura del 10% de la vista */
+  background-color: var(--rtc-teritiary-color);
+}
+main {
+  flex: 3; /* Crece dos veces más que nav y aside */
+  background-color: var(--rtc-primary-color);
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+section {
+  display: grid;
+  background-color: white;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h2 {
+  margin-bottom: 10px;
+  color: var(--rtc-secondary-color); /* Verde oscuro */
+}
+p {
+  margin-bottom: 10px;
+}
+nav,
+aside {
+  flex: 1; /* Crece proporcionalmente */
+  background-color: var(--rtc-primary-color);
+  padding: 20px;
+}
+.testimonios {
+  margin-bottom: 20px; /* Añade un margen inferior de 20px a la sección de testimonios */
+  border-radius: 20px;
+}
+.blog {
+  margin-top: 20px; /* Añade un margen superior de 20px a la sección del blog */
+  border-radius: 20px;
+}
+.div-container {
+  position: sticky; /* Fija la posición relativa */
+  top: 100px; /* Distancia desde el borde superior de la ventana */
+  background-color: white; /* Fondo blanco */
+  padding: 20px; /* Relleno interior */
+  border-radius: 5px; /* Bordes redondeados */
+  display: flex; /* Usar Flexbox */
+  flex-direction: column; /* Dirección de columna */
+  align-items: center; /* Centrar contenido */
+  gap: 10px; /* Espacio entre elementos */
+  border: 2px solid black; /* Borde negro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra para resaltar */
+}
+.form-group {
+  width: 100%; /* Ancho completo */
+  display: flex; /* Usar Flexbox */
+  flex-direction: column; /* Dirección de columna */
+  gap: 5px; /* Espacio entre elementos */
+  padding-bottom: 5px; /* Relleno inferior */
+}
+.form-group > input {
+  padding: 8px; /* Relleno interior */
+  border: 2px solid black; /* Borde negro */
+  border-radius: 5px; /* Bordes redondeados */
+}
+.form-group > button {
+  padding: 8px; /* Relleno interior */
+  border: 2px solid black; /* Borde negro */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: var(--rtc-secondary-color); /* Fondo azul */
+  color: white; /* Texto blanco */
+}
+footer {
+  width: 100%; /* Ancho completo */
+  display: flex; /* Usar Flexbox */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  padding: 0px; /* Relleno interior */
+  background-color: var(--rtc-teritiary-color); /* Color de fondo */
+}
+footer ul {
+  display: flex; /* Usar Flexbox */
+  gap: 20px; /* Espacio entre elementos */
+  list-style: none; /* Sin viñetas */
+  margin: 0; /* Sin márgenes */
+  padding: 0; /* Sin relleno */
+}
+footer ul li {
+  padding: 0 10px; /* Relleno horizontal */
+  color: var(--rtc-secondary-color);
+}
+footer ul li:last-child {
+  margin-right: 0; /* Sin margen a la derecha en el último elemento */
+}
+@media screen and (max-width: 700px) {
+  header > img {
+    width: 10vh; /* Tamaño reducido */
+    height: 10vh; /* Tamaño reducido */
+    min-width: 80px; /* Tamaño mínimo */
+    min-height: 80px; /* Tamaño mínimo */
+  }
+  .container {
+    flex-direction: column; /* Cambiar a columna */
+  }
+  main,
+  nav,
+  aside {
+    flex: auto; /* Tamaño automático */
+  }
+}
